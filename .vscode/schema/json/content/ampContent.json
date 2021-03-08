@@ -1,0 +1,24 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/content/ampContent.json",
+	"title": "AMPContent",
+	"description": "AMP page to render",
+	"additionalProperties": false,
+	"required": [
+		"type",
+		"url"
+	],
+	"properties": {
+		"type": {
+			"const": "AMPDocument"
+		},
+		"url": {
+			"type": "string",
+			"description": "A valid AMP page URL, otherwise nothing will be rendered"
+		}
+	},
+	"example": {
+		"type": "AMPDocument",
+		"url": "https://modoeficaz.com/category/trucos-rapidos/amp/"
+	}
+}

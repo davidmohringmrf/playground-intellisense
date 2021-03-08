@@ -1,0 +1,62 @@
+{
+	"cards": {
+		"homepage": {
+			"content": {
+				"type": "AMPDocument",
+				"url": "${PLAYGROUND_PROXY}/${CURRENT_HOSTNAME}/experiences/homepage/homepage.html"
+			},
+			"snapPoints": {
+				"initial": 0.7,
+				"minimised": 0.85,
+				"active": 80
+			},
+			"features": {
+				"header": {
+					"dragHandlerBg": "#282346"
+				},
+				"mode": "modal",
+				"isDraggable": true
+			},
+			"triggers": {
+				"myScrollTrigger": {
+					"on": "scroll",
+					"spec": {
+						"type": "absolute",
+						"pixel": 300,
+						"percentage": 0.1
+					}
+				}
+			}
+		},
+		"nextArticle": {
+			"content": {
+				"type": "AMPDocument",
+        "url": "${PLAYGROUND_PROXY}/${CURRENT_HOSTNAME}/experiences/taboola/taboola.html"
+			},
+			"snapPoints": {
+				"initial": 0.7,
+				"minimised": 1,
+				"active": 80
+			},
+			"features": {
+				"mode": "modal",
+				"isDraggable": true,
+				"useNaturalScroll": true,
+				"header": {
+					"dragHandlerBg": "#FFFFFF"
+				},
+				"removable": true
+			},
+			"triggers": {
+				"myScrollTrigger": {
+					"on": "scroll",
+					"spec": {
+						"type": "absolute",
+						"pixel": 2500,
+						"percentage": 0.8
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/content/adserverContent.json",
+	"title": "Ad server Content",
+	"description": "Renders an ad server in a card",
+	"additionalProperties": false,
+	"required": [
+		"type",
+		"name"
+	],
+	"properties": {
+		"type": {
+			"const": "AdServerProvider"
+		},
+		"name": {
+			"type": "string",
+			"description": "As defined in the adserver-provider's package.json"
+		},
+		"parameters": {
+			"type": "object",
+			"description": "Any additional properties the adserver-provider may need"
+		}
+	},
+	"example": {
+		"type": "AdServerProvider",
+		"name": "taboola",
+		"parameters": {
+			"publisher": "example.com",
+			"layout": "thumbnails"
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/page.json",
+  "title": "Page",
+  "description": "Page definitions that are in common.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "stickyElementSelector": {
+      "type": "string",
+      "description": "The CSS selector of an element that the card looks for to adapt the snapPoints based on its size."
+    }
+  },
+  "example": {
+    "stickyElementSelector": ".mrf-sticky-wrapper"
+  }
+}

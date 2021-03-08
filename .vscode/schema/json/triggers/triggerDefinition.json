@@ -1,0 +1,28 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/triggers/triggerDefinition.json",
+	"title": "Trigger definitions",
+	"description": "Trigger definitions for different type of card interaction",
+	"type": "object",
+	"additionalProperties": false,
+	"patternProperties": {
+		".*": {
+			"$ref": "#/definitions/triggerProperties"
+		}
+	},
+	"definitions": {
+		"triggerProperties": {
+			"oneOf": [
+				{
+					"$ref": "types/scrollTrigger.json"
+				},
+				{
+					"$ref": "types/intersectionTrigger.json"
+				},
+				{
+					"$ref": "types/timeoutTrigger.json"
+				}
+			]
+		}
+	}
+}

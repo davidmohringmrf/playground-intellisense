@@ -1,0 +1,25 @@
+{
+	"MarfeelPath": "resources/flowcards.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/flowcards.json",
+	"type": "object",
+	"title": "Flowcards JSON - define cards configuration of a tenant.",
+	"additionalProperties": false,
+	"properties": {
+		"cards": {
+			"$ref": "json/cards.json"
+		},
+		"page": {
+			"$ref": "json/page.json"
+		}
+	},
+	"maxProperties": 2,
+	"example": {
+			"cards": {
+					"cardHome": { }
+			},
+			"page": {
+					"stickyElementSelector": ".mrf-sticky-wrapper"
+			}
+	}
+}

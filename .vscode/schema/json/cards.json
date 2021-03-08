@@ -1,0 +1,48 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/cards.json",
+	"title": "Cards",
+	"description": "Cards definitions",
+	"type": "object",
+	"additionalProperties": false,
+	"patternProperties": {
+		".*": {
+			"additionalProperties": false,
+			"required": [
+				"content",
+				"snapPoints",
+				"triggers"
+			],
+			"properties": {
+				"content": {
+					"type": "object",
+					"title": "Content Object",
+					"description": "Contains the type of card that is going to be rendered",
+					"oneOf": [
+						{
+							"$ref": "content/widgetContent.json"
+						},
+						{
+							"$ref": "content/ampContent.json"
+						},
+						{
+							"$ref": "content/adserverContent.json"
+						},
+						{
+							"$ref": "content/containerContent.json"
+						}
+					]
+				},
+				"snapPoints": {
+					"$ref": "snapPoints/cardSnapPoints.json"
+				},
+				"features": {
+					"$ref": "features/cardFeatures.json"
+				},
+				"triggers": {
+					"$ref": "triggers/triggerDefinition.json"
+				}
+			}
+		}
+	}
+}

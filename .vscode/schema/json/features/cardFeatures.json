@@ -1,0 +1,70 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/features/cardFeatures.json",
+	"title": "Card props",
+	"description": "Card properties",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"mode": {
+			"type": "string",
+			"enum": [
+				"modal",
+				"contextual"
+			],
+			"description": "When 'modal', the content behind the Card won't be interactive, once the Card is in 'active' snapPoint",
+			"default": "contextual"
+		},
+		"isDraggable": {
+			"type": "boolean",
+			"default": true,
+			"description": "Indicates if the drag gesture of the Card is enabled or not"
+		},
+		"button": {
+			"type": "object",
+			"properties": {
+				"action": {
+					"type": "string"
+				}
+			},
+			"description": "Shows a close button when the card is in the 'active' snapPoint. When tapped, it could do two actions: brings the Card back to 'initial' snapPoint or navigate to the homePage"
+		},
+		"useNaturalScroll": {
+			"type": "boolean",
+			"default": false,
+			"description": "When set to true, the card is positioned as a sticky at the bottom of the screen. Its content becomes part of the article itself when the user has reached the end of the page."
+		},
+		"header": {
+			"type": "object",
+			"properties": {
+				"dragHandlerBg": {
+					"type": "string"
+				},
+				"logo": {
+					"type": "string"
+				},
+				"title": {
+					"type": "string"
+				}
+			}
+		},
+		"heroElement": {
+			"type": "object",
+			"properties": {
+					"src": {
+							"type": "string"
+					}
+			}
+	}
+	},
+	"example": {
+		"mode": "contextual",
+		"header": {
+			"dragHandlerBg": "#1F5E95"
+		},
+		"isDraggable": true,
+		"button":{
+			"action": "goTo:${HOMEPAGE}"
+		}
+	}
+}

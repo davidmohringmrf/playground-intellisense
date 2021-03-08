@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/triggers/types/intersection/new.json",
+	"title": "New Intersection trigger",
+	"description": "New element intersection trigger definition",
+	"type": "object",
+	"required": [
+		"type",
+		"threshold",
+		"rootMargin"
+	],
+	"properties": {
+		"type": {
+			"const": "new"
+		},
+		"height": {
+			"type": "string",
+			"description": "The CSS value (including a unit) for the new element's height",
+			"example": "10px"
+		},
+		"threshold": {
+			"type": "number",
+			"description": "The intersection threshold to take into account, from 0 (as soon as intersects) to 1 (once the element entirely visible). ",
+			"default": 0,
+			"min": 0,
+			"max": 1,
+			"examples": [
+				0.25, 0, 0.5, 1
+			]
+		},
+		"rootMargin": {
+			"type": "string",
+			"description": "The shorthand value of the margin to consider before intersection. \n See https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin for more details. ",
+			"default": "0px 0px 0px 0px"
+		}
+	}
+}

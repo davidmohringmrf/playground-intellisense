@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/content/containerContent.json",
+	"title": "Container Content",
+	"description": "Renders an empty container in a card",
+	"additionalProperties": false,
+	"required": [
+		"type"
+	],
+	"properties": {
+		"type": {
+			"const": "Container"
+		},
+		"id": {
+			"type": "string",
+			"description": "Identifier that is set on the empty container"
+		},
+		"class": {
+			"type": "string",
+			"description": "The classes that are set on the empty container"
+		}
+	},
+	"example": {
+		"type": "Container",
+		"id": "flowcardContainer"
+	}
+}

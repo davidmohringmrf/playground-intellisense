@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/snapPoints/cardSnapPoints.json",
+	"title": "Snap points",
+	"description": "Values where the card will be snapped",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {
+		"snapPoint": {
+			"type": "number",
+			"minimum": 0,
+			"description": "The top of the card respective to the top of the device's screen. From 0 to 1 indicates percentage of viewport (i.e 0.1 means 10% of device's viewport). For values greater than 1, indicates absolute pixels (i.e 100 means 100px from top of the viewport)"
+		}
+	},
+	"properties": {
+		"initial": {
+			"$ref": "#/definitions/snapPoint"
+		},
+		"minimised": {
+			"$ref": "#/definitions/snapPoint"
+		},
+		"promoted": {
+			"$ref": "#/definitions/snapPoint"
+		},
+		"active": {
+			"$ref": "#/definitions/snapPoint"
+		}
+	},
+	"required": [
+		"active"
+	],
+	"example": {
+		"initial": 0.7,
+		"minimised": 0.85,
+		"promoted": 176,
+		"active": 80
+	}
+}

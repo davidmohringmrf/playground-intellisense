@@ -1,0 +1,39 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/triggers/types/intersectionTrigger.json",
+	"title": "Intersection trigger",
+	"description": "Triggers the card when intersecting with some element",
+	"type": "object",
+	"required": [
+		"on",
+		"spec"
+	],
+	"properties": {
+		"on": {
+			"const": "intersection"
+		},
+		"action": {
+			"type": "string",
+			"enum": [
+				"setSnapPoint:promoted",
+				"setSnapPoint:active",
+				"setSnapPoint:initial",
+				"setSnapPoint:minimised",
+				"setSnapPoint:hidden"
+			],
+			"default": "setSnapPoint:active",
+			"description": "The state to trigger when the card reaches the target element."
+		},
+		"spec": {
+			"type": "object",
+			"oneOf": [
+				{
+					"$ref": "intersection/external.json"
+				},
+				{
+					"$ref": "intersection/new.json"
+				}
+			]
+		}
+	}
+}

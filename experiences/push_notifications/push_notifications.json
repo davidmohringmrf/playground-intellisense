@@ -1,0 +1,31 @@
+{
+	"cards": {
+		"pushNotifications": {
+			"content": {
+				"type": "AMPDocument",
+				"url": "${PLAYGROUND_PROXY}/${CURRENT_HOSTNAME}/experiences/push_notifications/push_notifications.html"
+			},
+			"snapPoints": {
+				"active": 0.65
+			},
+			"features": {
+				"mode": "contextual",
+				"removable": true,
+				"header": {
+					"dragHandlerBg": "#FFFFFF"
+				},
+				"isDraggable": true
+			},
+			"triggers": {
+				"myScrollTrigger": {
+					"on": "scroll",
+					"spec": {
+						"type": "absolute",
+						"pixel": 300,
+						"percentage": 0.1
+					}
+				}
+			}
+		}
+	}
+}

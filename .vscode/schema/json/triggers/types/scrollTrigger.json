@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/triggers/types/scrollTrigger.json",
+	"title": "Scroll trigger",
+	"description": "Triggers the card when the user has scrolled the specified amount or way",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {},
+	"required": [
+		"on",
+		"spec"
+	],
+	"properties": {
+		"on": {
+			"const": "scroll"
+		},
+		"spec": {
+			"type": "object",
+			"oneOf": [
+				{
+					"$ref": "scroll/absolute.json"
+				},
+				{
+					"$ref": "scroll/relative.json"
+				},
+				{
+					"$ref": "scroll/velocity.json"
+				}
+			]
+		}
+	}
+}

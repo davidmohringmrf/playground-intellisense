@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/content/widgetContent.json",
+	"title": "Widget Content",
+	"description": "Renders a widget in a card",
+	"additionalProperties": false,
+	"required": [
+		"type",
+		"name"
+	],
+	"properties": {
+		"type": {
+			"const": "WidgetProvider"
+		},
+		"name": {
+			"type": "string",
+			"description": "As defined in the widget-provider's package.json"
+		},
+		"parameters": {
+			"type": "object",
+			"description": "Any additional properties the widget-provider may need"
+		}
+	},
+	"example": {
+		"type": "WidgetProvider",
+		"name": "poll-daddy",
+		"parameters": {
+			"pollId": "10537062"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/triggers/types/scroll/relative.json",
+	"title": "Relative Scroll trigger",
+	"description": "Scroll trigger based on relative pixels",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {},
+	"required": [
+		"type",
+		"pixel"
+	],
+	"properties": {
+		"type": {
+			"const": "relative"
+		},
+		"pixel": {
+			"type": "number"
+		}
+	}
+}

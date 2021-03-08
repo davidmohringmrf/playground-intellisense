@@ -1,0 +1,24 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://flowcards.mrf.io/json/triggers/types/scroll/velocity.json",
+	"title": "Velocity Scroll trigger",
+	"description": "Scroll trigger based on velocity of pixels of scroll",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {},
+	"required": [
+		"type",
+		"threshold"
+	],
+	"properties": {
+		"type": {
+			"const": "velocity"
+		},
+		"threshold": {
+			"type": "number",
+			"minimum": -1,
+			"maximum": 1,
+			"description": "The range between 0 and 1 for slow and fast scrolling, where negative a value indicates scroll direction up and positive value indicates scroll direction down"
+		}
+	}
+}

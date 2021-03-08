@@ -1,0 +1,31 @@
+{
+	"cards": {
+		"newsletter": {
+			"content": {
+				"type": "AMPDocument",
+				"url": "${PLAYGROUND_PROXY}/${CURRENT_HOSTNAME}/experiences/newsletter/newsletter.html"
+			},
+			"snapPoints": {
+				"active": 0.62
+			},
+			"features": {
+				"mode": "contextual",
+				"removable": true,
+				"isDraggable": true,
+				"header": {
+					"dragHandlerBg": "#223F6D"
+				}
+			},
+			"triggers": {
+				"myScrollTrigger": {
+					"on": "scroll",
+					"spec": {
+						"type": "absolute",
+						"pixel": 300,
+						"percentage": 0.1
+					}
+				}
+			}
+		}
+	}
+}
